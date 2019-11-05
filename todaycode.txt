@@ -1,0 +1,134 @@
+#include <iostream>
+using namespace std;
+struct node{
+    int data;
+    node * next=NULL;
+    node(int data){
+        this->data=data;
+        
+    }
+};
+node *  creatlinklist(){
+int data;
+cin>>data;
+node * head= NULL;
+if(data!=-1){
+    head=new node(data);
+}
+else{
+    return head;
+}
+node * tail=NULL;
+tail=head;
+cin>>data;
+while(data!=-1){
+    node * temp=NULL;
+    temp=new node(data);
+
+    tail->next=temp;
+    tail=temp;
+    cin>>data;
+}
+return head;
+
+
+}
+void print ( node * head){
+while(head){
+   // cout<<"k";
+    cout<<" "<<head->data<<" --> ";
+    head=head->next;
+}
+return ;
+}
+int main() {
+    node * head=creatlinklist();
+    print(head);
+    return 0;
+}
+
+https://ide.codingblocks.com/s/104479
+https://ide.codingblocks.com/s/107201
+bitonic sum https://ide.codingblocks.com/s/104653
+
+
+
+
+stack 
+#include <iostream>
+#include<vector>
+using namespace std;
+struct stack{
+vector<int > v;
+bool empty(){
+    return v.size()==0;
+}
+void push(int data){
+    v.push_back(data);
+}
+void pop(){
+    v.pop_back();
+}
+int size(){
+    return v.size();
+}
+int  top(){
+    if(!empty()){
+    return  v[v.size()-1];
+    }
+    return -1;
+}
+
+};
+int main() {
+    stack s;
+s.push(4);
+s.push(3);
+s.push(2);
+s.push(1);
+    while(!s.empty()){
+        cout<<s.top();
+        s.pop();
+    }
+}
+queues https://ide.codingblocks.com/s/107536
+https://ide.codingblocks.com/s/107687
+
+binary tree https://ide.codingblocks.com/s/108184 lavel wise
+
+https://ide.codingblocks.com/s/108425
+https://ide.codingblocks.com/s/108448
+
+lavel order tree and lavel order print 
+https://ide.codingblocks.com/s/108589
+
+pre order tree and print 
+https://ide.codingblocks.com/s/108599
+
+delete leaves
+https://ide.codingblocks.com/s/108731
+
+
+linklist
+https://ide.codingblocks.com/s/108866
+
+
+
+build bst -1 https://ide.codingblocks.com/s/111756
+
+
+n queen problem https://ide.codingblocks.com/s/123501
+runtime error https://ide.codingblocks.com/s/111856
+
+print function with END https://ide.codingblocks.com/s/116332
+
+vertical order tree error https://ide.codingblocks.com/s/119384
+
+graph using hashmap https://ide.codingblocks.com/s/121490
+
+
+
+https://ide.codingblocks.com/s/124694
+
+https://ide.codingblocks.com/s/125181
+https://ide.codingblocks.com/s/126697
